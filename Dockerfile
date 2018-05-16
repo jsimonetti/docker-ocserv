@@ -10,4 +10,4 @@ RUN set -x && \
 WORKDIR /etc/ocserv
 
 EXPOSE 443
-CMD [ "start.sh" ]
+CMD [ "/start.sh" ]
