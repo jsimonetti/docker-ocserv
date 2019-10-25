@@ -1,4 +1,4 @@
-FROM jsimonetti/alpine-edge:latest AS builder
+FROM alpine:latest AS builder
 
 RUN apk add --no-cache musl-dev iptables gnutls-dev readline-dev libnl3-dev lz4-dev 
 RUN buildDeps="xz openssl gcc autoconf make linux-headers protobuf-c-dev libev-dev"; \
@@ -26,7 +26,7 @@ RUN buildDeps="xz openssl gcc autoconf make linux-headers protobuf-c-dev libev-d
 
 
 
-FROM jsimonetti/alpine-edge:latest
+FROM alpine:latest
 
 RUN apk add --no-cache iptables gnutls lz4-libs libev protobuf-c readline libnl3
 
